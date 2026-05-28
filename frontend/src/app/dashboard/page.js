@@ -34,13 +34,11 @@ export default function Dashboard() {
     }
   }, [user]);
 
-  if (!user) return null;
-
   // Global State
   const [activeTab, setActiveTab] = useState(
-    user.role === "ADMIN"
+    user?.role === "ADMIN"
       ? "reports"
-      : user.role === "RECEPTIONIST"
+      : user?.role === "RECEPTIONIST"
       ? "patients"
       : "appointments"
   );
@@ -90,6 +88,44 @@ export default function Dashboard() {
   const [adminReportLoading, setAdminReportLoading] = useState(false);
   const [adminSearchQuery, setAdminSearchQuery] = useState("");
 
+  // Trigger Patient List Fetch (Every keystroke trigger re-renders parent! - Performance bug)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearch(patientSearch);
+    }, 400);
+    return () => clearTimeout(timer);
+  }, [patientSearch]);
+  useEffect(() => {
+    if (user?.role === "RECEPTIONIST" || user?.role === "ADMIN") {
+      fetchPatients(1);
+    }
+  }, [debouncedSearch, patientGender]);
+
+  // Fetch Doctors for booking drop-down
+  const fetchDoctorsDropdown = async () => {
+    try {
+      const res = await fetch(`${API_BASE_URL}/doctors`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      const data = await res.json();
+      setDoctorsList(data);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  useEffect(() => {
+    fetchDoctorsDropdown();
+  }, []);
+
+  useEffect(() => {
+    if (user?.role === "DOCTOR" && doctorsList.length > 0) {
+      fetchDoctorWorklist();
+    }
+  }, [doctorsList]);
+
+  if (!user) return null;
+
   // ==========================================
   // RECEPTIONIST FUNCTIONS
   // ==========================================
@@ -120,36 +156,6 @@ export default function Dashboard() {
       setPatientsLoading(false);
     }
   };
-
-  // Trigger Patient List Fetch (Every keystroke trigger re-renders parent! - Performance bug)
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setDebouncedSearch(patientSearch);
-    }, 400);
-    return () => clearTimeout(timer);
-  }, [patientSearch]);
-  useEffect(() => {
-    if (user.role === "RECEPTIONIST" || user.role === "ADMIN") {
-      fetchPatients(1);
-    }
-  }, [debouncedSearch, patientGender]);
-
-  // Fetch Doctors for booking drop-down
-  const fetchDoctorsDropdown = async () => {
-    try {
-      const res = await fetch(`${API_BASE_URL}/doctors`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      const data = await res.json();
-      setDoctorsList(data);
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
-  useEffect(() => {
-    fetchDoctorsDropdown();
-  }, []);
 
   // Handle Patient Registration
   const handleRegisterPatient = async (e) => {
@@ -323,12 +329,6 @@ export default function Dashboard() {
       console.error(e);
     }
   };
-
-  useEffect(() => {
-    if (user.role === "DOCTOR" && doctorsList.length > 0) {
-      fetchDoctorWorklist();
-    }
-  }, [doctorsList]);
 
   // Update token status (WAITING -> CALLING -> COMPLETED / SKIPPED)
   const handleUpdateQueueStatus = async (tokenId, newStatus) => {

@@ -191,7 +191,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQM
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$clock$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Clock$3e$__ = __turbopack_context__.i("[project]/Documents/Figital/HAQMS/frontend/node_modules/lucide-react/dist/esm/icons/clock.mjs [app-ssr] (ecmascript) <export default as Clock>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__ = __turbopack_context__.i("[project]/Documents/Figital/HAQMS/frontend/node_modules/lucide-react/dist/esm/icons/arrow-right.mjs [app-ssr] (ecmascript) <export default as ArrowRight>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$shield$2d$alert$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ShieldAlert$3e$__ = __turbopack_context__.i("[project]/Documents/Figital/HAQMS/frontend/node_modules/lucide-react/dist/esm/icons/shield-alert.mjs [app-ssr] (ecmascript) <export default as ShieldAlert>");
-'use client';
+"use client";
 ;
 ;
 ;
@@ -204,41 +204,41 @@ function Dashboard() {
     // Navigation Guard
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (!user) {
-            router.push('/login');
+            router.push("/login");
         }
     }, [
         user
     ]);
-    if (!user) return null;
     // Global State
-    const [activeTab, setActiveTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(user.role === 'ADMIN' ? 'reports' : user.role === 'RECEPTIONIST' ? 'patients' : 'appointments');
+    const [activeTab, setActiveTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(user?.role === "ADMIN" ? "reports" : user?.role === "RECEPTIONIST" ? "patients" : "appointments");
     // ==========================================
     // STATE FOR RECEPTIONIST WORKFLOWS
     // ==========================================
     const [patients, setPatients] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const [patientsLoading, setPatientsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [patientSearch, setPatientSearch] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [patientGender, setPatientGender] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('All');
+    const [patientSearch, setPatientSearch] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [debouncedSearch, setDebouncedSearch] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [patientGender, setPatientGender] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("All");
     const [patientsPagination, setPatientsPagination] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
         page: 1,
         totalPages: 1
     });
     // Registration Form
-    const [regName, setRegName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [regEmail, setRegEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [regPhone, setRegPhone] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [regAge, setRegAge] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [regGender, setRegGender] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('Male');
-    const [regHistory, setRegHistory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [regMessage, setRegMessage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
+    const [regName, setRegName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [regEmail, setRegEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [regPhone, setRegPhone] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [regAge, setRegAge] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [regGender, setRegGender] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("Male");
+    const [regHistory, setRegHistory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [regMessage, setRegMessage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     // Queue and Appointment Booking
     const [doctorsList, setDoctorsList] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
-    const [bookingPatientId, setBookingPatientId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [bookingDoctorId, setBookingDoctorId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [bookingDate, setBookingDate] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [bookingReason, setBookingReason] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [bookingMessage, setBookingMessage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
-    const [checkinMessage, setCheckinMessage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
+    const [bookingPatientId, setBookingPatientId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [bookingDoctorId, setBookingDoctorId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [bookingDate, setBookingDate] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [bookingReason, setBookingReason] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [bookingMessage, setBookingMessage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [checkinMessage, setCheckinMessage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     // ==========================================
     // STATE FOR DOCTOR WORKFLOWS
     // ==========================================
@@ -250,7 +250,49 @@ function Dashboard() {
     // ==========================================
     const [adminReportData, setAdminReportData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [adminReportLoading, setAdminReportLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [adminSearchQuery, setAdminSearchQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
+    const [adminSearchQuery, setAdminSearchQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    // Trigger Patient List Fetch (Every keystroke trigger re-renders parent! - Performance bug)
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const timer = setTimeout(()=>{
+            setDebouncedSearch(patientSearch);
+        }, 400);
+        return ()=>clearTimeout(timer);
+    }, [
+        patientSearch
+    ]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (user?.role === "RECEPTIONIST" || user?.role === "ADMIN") {
+            fetchPatients(1);
+        }
+    }, [
+        debouncedSearch,
+        patientGender
+    ]);
+    // Fetch Doctors for booking drop-down
+    const fetchDoctorsDropdown = async ()=>{
+        try {
+            const res = await fetch(`${API_BASE_URL}/doctors`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
+            const data = await res.json();
+            setDoctorsList(data);
+        } catch (e) {
+            console.error(e);
+        }
+    };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        fetchDoctorsDropdown();
+    }, []);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        if (user?.role === "DOCTOR" && doctorsList.length > 0) {
+            fetchDoctorWorklist();
+        }
+    }, [
+        doctorsList
+    ]);
+    if (!user) return null;
     // ==========================================
     // RECEPTIONIST FUNCTIONS
     // ==========================================
@@ -259,9 +301,9 @@ function Dashboard() {
         setPatientsLoading(true);
         try {
             // Inefficient memory pagination called from client
-            const res = await fetch(`${API_BASE_URL}/patients?page=${page}&limit=5&search=${patientSearch}&gender=${patientGender}`, {
+            const res = await fetch(`${API_BASE_URL}/patients?page=${page}&limit=5&search=${debouncedSearch}&gender=${patientGender}`, {
                 headers: {
-                    'Authorization': `Bearer ${token}`
+                    Authorization: `Bearer ${token}`
                 }
             });
             const data = await res.json();
@@ -279,48 +321,22 @@ function Dashboard() {
             setPatientsLoading(false);
         }
     };
-    // Trigger Patient List Fetch (Every keystroke trigger re-renders parent! - Performance bug)
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        if (user.role === 'RECEPTIONIST' || user.role === 'ADMIN') {
-            fetchPatients(1);
-        }
-    }, [
-        patientSearch,
-        patientGender
-    ]);
-    // Fetch Doctors for booking drop-down
-    const fetchDoctorsDropdown = async ()=>{
-        try {
-            const res = await fetch(`${API_BASE_URL}/doctors`, {
-                headers: {
-                    'Authorization': `Bearer ${token}`
-                }
-            });
-            const data = await res.json();
-            setDoctorsList(data);
-        } catch (e) {
-            console.error(e);
-        }
-    };
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        fetchDoctorsDropdown();
-    }, []);
     // Handle Patient Registration
     const handleRegisterPatient = async (e)=>{
         e.preventDefault();
-        setRegMessage('');
-        // INCONSISTENT VALIDATION: Receptionist form doesn't validate telephone structure on client, 
+        setRegMessage("");
+        // INCONSISTENT VALIDATION: Receptionist form doesn't validate telephone structure on client,
         // leading to database pollution (e.g. text telephone values)
         if (!regName || !regPhone || !regAge) {
-            setRegMessage('Error: Name, Age and Phone number are required.');
+            setRegMessage("Error: Name, Age and Phone number are required.");
             return;
         }
         try {
             const res = await fetch(`${API_BASE_URL}/patients`, {
-                method: 'POST',
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`
                 },
                 body: JSON.stringify({
                     name: regName,
@@ -333,17 +349,17 @@ function Dashboard() {
             });
             const data = await res.json();
             if (res.ok) {
-                setRegMessage('Success: Patient registered successfully!');
+                setRegMessage("Success: Patient registered successfully!");
                 // Clear fields
-                setRegName('');
-                setRegEmail('');
-                setRegPhone('');
-                setRegAge('');
-                setRegHistory('');
+                setRegName("");
+                setRegEmail("");
+                setRegPhone("");
+                setRegAge("");
+                setRegHistory("");
                 // Refresh directory
                 fetchPatients(1);
             } else {
-                setRegMessage(`Error: ${data.error || 'Failed to register'}`);
+                setRegMessage(`Error: ${data.error || "Failed to register"}`);
             }
         } catch (err) {
             setRegMessage(`Error: ${err.message}`);
@@ -352,17 +368,17 @@ function Dashboard() {
     // Handle Appointment Booking
     const handleBookAppointment = async (e)=>{
         e.preventDefault();
-        setBookingMessage('');
+        setBookingMessage("");
         if (!bookingPatientId || !bookingDoctorId || !bookingDate) {
-            setBookingMessage('Error: All booking fields are required.');
+            setBookingMessage("Error: All booking fields are required.");
             return;
         }
         try {
             const res = await fetch(`${API_BASE_URL}/appointments`, {
-                method: 'POST',
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`
                 },
                 body: JSON.stringify({
                     patientId: bookingPatientId,
@@ -373,11 +389,11 @@ function Dashboard() {
             });
             const data = await res.json();
             if (res.ok) {
-                setBookingMessage('Success: Appointment booked successfully!');
-                setBookingReason('');
-                if (user.role === 'DOCTOR') fetchDoctorWorklist();
+                setBookingMessage("Success: Appointment booked successfully!");
+                setBookingReason("");
+                if (user.role === "DOCTOR") fetchDoctorWorklist();
             } else {
-                setBookingMessage(`Error: ${data.error || 'Failed to book'}`);
+                setBookingMessage(`Error: ${data.error || "Failed to book"}`);
             }
         } catch (err) {
             setBookingMessage(`Error: ${err.message}`);
@@ -385,20 +401,20 @@ function Dashboard() {
     };
     // Delete Patient (Bypassed authorization admin check!)
     const handleDeletePatient = async (id)=>{
-        if (!confirm('Are you sure you want to delete this patient record?')) return;
+        if (!confirm("Are you sure you want to delete this patient record?")) return;
         try {
             const res = await fetch(`${API_BASE_URL}/patients/${id}`, {
-                method: 'DELETE',
+                method: "DELETE",
                 headers: {
-                    'Authorization': `Bearer ${token}`
+                    Authorization: `Bearer ${token}`
                 }
             });
             const data = await res.json();
             if (res.ok) {
-                alert(data.message || 'Patient deleted.');
+                alert(data.message || "Patient deleted.");
                 fetchPatients(patientsPagination.page);
             } else {
-                alert(`Error: ${data.error || 'Unauthorized deletion!'}`);
+                alert(`Error: ${data.error || "Unauthorized deletion!"}`);
             }
         } catch (err) {
             alert(`Error: ${err.message}`);
@@ -406,13 +422,13 @@ function Dashboard() {
     };
     // Queue Token Checkin (Race condition API!)
     const handleQueueCheckin = async (patientId, doctorId, appointmentId = null)=>{
-        setCheckinMessage('');
+        setCheckinMessage("");
         try {
             const res = await fetch(`${API_BASE_URL}/queue/checkin`, {
-                method: 'POST',
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`
                 },
                 body: JSON.stringify({
                     patientId,
@@ -423,7 +439,7 @@ function Dashboard() {
             const data = await res.json();
             if (res.ok) {
                 setCheckinMessage(`Checked in! Generated Token #${data.token.tokenNumber}`);
-                if (user.role === 'DOCTOR') fetchDoctorWorklist();
+                if (user.role === "DOCTOR") fetchDoctorWorklist();
             } else {
                 setCheckinMessage(`Error check-in: ${data.error}`);
             }
@@ -435,7 +451,7 @@ function Dashboard() {
     // DOCTOR WORKFLOW FUNCTIONS
     // ==========================================
     const fetchDoctorWorklist = async ()=>{
-        if (user.role !== 'DOCTOR') return;
+        if (user.role !== "DOCTOR") return;
         try {
             // Find matching doctor from doctors dropdown using user ID link
             const matchedDoc = doctorsList.find((d)=>d.userId === user.id);
@@ -443,7 +459,7 @@ function Dashboard() {
             // 1. Fetch appointments for this doctor (N+1 database queries triggers inside server)
             const appRes = await fetch(`${API_BASE_URL}/appointments?doctorId=${matchedDoc.id}`, {
                 headers: {
-                    'Authorization': `Bearer ${token}`
+                    Authorization: `Bearer ${token}`
                 }
             });
             const appData = await appRes.json();
@@ -453,7 +469,7 @@ function Dashboard() {
             // 2. Fetch queue list for this doctor today
             const queueRes = await fetch(`${API_BASE_URL}/queue?doctorId=${matchedDoc.id}`, {
                 headers: {
-                    'Authorization': `Bearer ${token}`
+                    Authorization: `Bearer ${token}`
                 }
             });
             const queueData = await queueRes.json();
@@ -462,21 +478,14 @@ function Dashboard() {
             console.error(e);
         }
     };
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        if (user.role === 'DOCTOR' && doctorsList.length > 0) {
-            fetchDoctorWorklist();
-        }
-    }, [
-        doctorsList
-    ]);
     // Update token status (WAITING -> CALLING -> COMPLETED / SKIPPED)
     const handleUpdateQueueStatus = async (tokenId, newStatus)=>{
         try {
             const res = await fetch(`${API_BASE_URL}/queue/${tokenId}`, {
-                method: 'PATCH',
+                method: "PATCH",
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`
                 },
                 body: JSON.stringify({
                     status: newStatus
@@ -493,13 +502,13 @@ function Dashboard() {
     const handleCompleteAppointment = async (appId)=>{
         try {
             const res = await fetch(`${API_BASE_URL}/appointments/${appId}`, {
-                method: 'PATCH',
+                method: "PATCH",
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`
                 },
                 body: JSON.stringify({
-                    status: 'COMPLETED'
+                    status: "COMPLETED"
                 })
             });
             if (res.ok) {
@@ -519,7 +528,7 @@ function Dashboard() {
             // Calls slow nested aggregation endpoint
             const res = await fetch(`${API_BASE_URL}/reports/doctor-stats`, {
                 headers: {
-                    'Authorization': `Bearer ${token}`
+                    Authorization: `Bearer ${token}`
                 }
             });
             const data = await res.json();
@@ -537,7 +546,7 @@ function Dashboard() {
         try {
             const res = await fetch(`${API_BASE_URL}/doctors?search=${adminSearchQuery}`, {
                 headers: {
-                    'Authorization': `Bearer ${token}`
+                    Authorization: `Bearer ${token}`
                 }
             });
             const data = await res.json();
@@ -555,7 +564,7 @@ function Dashboard() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$src$2f$components$2f$common$2f$Navbar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                lineNumber: 369,
+                lineNumber: 416,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -564,68 +573,68 @@ function Dashboard() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex border-b border-slate-200 dark:border-slate-800 mb-8 overflow-x-auto gap-4",
                         children: [
-                            user.role === 'ADMIN' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                            user.role === "ADMIN" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: ()=>setActiveTab('reports'),
-                                        className: `py-3.5 px-1 border-b-2 font-bold text-sm transition-all whitespace-nowrap ${activeTab === 'reports' ? 'border-teal-500 text-teal-600 dark:text-teal-400' : 'border-transparent text-slate-400'}`,
+                                        onClick: ()=>setActiveTab("reports"),
+                                        className: `py-3.5 px-1 border-b-2 font-bold text-sm transition-all whitespace-nowrap ${activeTab === "reports" ? "border-teal-500 text-teal-600 dark:text-teal-400" : "border-transparent text-slate-400"}`,
                                         children: "System Audit Reports"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 377,
+                                        lineNumber: 423,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: ()=>setActiveTab('physicians'),
-                                        className: `py-3.5 px-1 border-b-2 font-bold text-sm transition-all whitespace-nowrap ${activeTab === 'physicians' ? 'border-teal-500 text-teal-600 dark:text-teal-400' : 'border-transparent text-slate-400'}`,
+                                        onClick: ()=>setActiveTab("physicians"),
+                                        className: `py-3.5 px-1 border-b-2 font-bold text-sm transition-all whitespace-nowrap ${activeTab === "physicians" ? "border-teal-500 text-teal-600 dark:text-teal-400" : "border-transparent text-slate-400"}`,
                                         children: "Physician Registry"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 383,
+                                        lineNumber: 433,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true),
-                            (user.role === 'RECEPTIONIST' || user.role === 'ADMIN') && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                            (user.role === "RECEPTIONIST" || user.role === "ADMIN") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: ()=>setActiveTab('patients'),
-                                        className: `py-3.5 px-1 border-b-2 font-bold text-sm transition-all whitespace-nowrap ${activeTab === 'patients' ? 'border-teal-500 text-teal-600 dark:text-teal-400' : 'border-transparent text-slate-400'}`,
+                                        onClick: ()=>setActiveTab("patients"),
+                                        className: `py-3.5 px-1 border-b-2 font-bold text-sm transition-all whitespace-nowrap ${activeTab === "patients" ? "border-teal-500 text-teal-600 dark:text-teal-400" : "border-transparent text-slate-400"}`,
                                         children: "Patient Registry Directory"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 394,
+                                        lineNumber: 448,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: ()=>setActiveTab('book'),
-                                        className: `py-3.5 px-1 border-b-2 font-bold text-sm transition-all whitespace-nowrap ${activeTab === 'book' ? 'border-teal-500 text-teal-600 dark:text-teal-400' : 'border-transparent text-slate-400'}`,
+                                        onClick: ()=>setActiveTab("book"),
+                                        className: `py-3.5 px-1 border-b-2 font-bold text-sm transition-all whitespace-nowrap ${activeTab === "book" ? "border-teal-500 text-teal-600 dark:text-teal-400" : "border-transparent text-slate-400"}`,
                                         children: "Scheduling / Check-in Portal"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 400,
+                                        lineNumber: 458,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true),
-                            user.role === 'DOCTOR' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                            user.role === "DOCTOR" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: ()=>setActiveTab('appointments'),
-                                        className: `py-3.5 px-1 border-b-2 font-bold text-sm transition-all whitespace-nowrap ${activeTab === 'appointments' ? 'border-teal-500 text-teal-600 dark:text-teal-400' : 'border-transparent text-slate-400'}`,
+                                        onClick: ()=>setActiveTab("appointments"),
+                                        className: `py-3.5 px-1 border-b-2 font-bold text-sm transition-all whitespace-nowrap ${activeTab === "appointments" ? "border-teal-500 text-teal-600 dark:text-teal-400" : "border-transparent text-slate-400"}`,
                                         children: "My Scheduled Bookings"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 411,
+                                        lineNumber: 473,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: ()=>setActiveTab('queue'),
-                                        className: `py-3.5 px-1 border-b-2 font-bold text-sm transition-all whitespace-nowrap ${activeTab === 'queue' ? 'border-teal-500 text-teal-600 dark:text-teal-400' : 'border-transparent text-slate-400'}`,
+                                        onClick: ()=>setActiveTab("queue"),
+                                        className: `py-3.5 px-1 border-b-2 font-bold text-sm transition-all whitespace-nowrap ${activeTab === "queue" ? "border-teal-500 text-teal-600 dark:text-teal-400" : "border-transparent text-slate-400"}`,
                                         children: "Active Calling Queue"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 417,
+                                        lineNumber: 483,
                                         columnNumber: 15
                                     }, this)
                                 ]
@@ -633,7 +642,7 @@ function Dashboard() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                        lineNumber: 374,
+                        lineNumber: 420,
                         columnNumber: 9
                     }, this),
                     checkinMessage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -643,25 +652,25 @@ function Dashboard() {
                                 children: checkinMessage
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                lineNumber: 430,
+                                lineNumber: 500,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>setCheckinMessage(''),
+                                onClick: ()=>setCheckinMessage(""),
                                 className: "font-bold underline text-xs",
                                 children: "Dismiss"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                lineNumber: 431,
+                                lineNumber: 501,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                        lineNumber: 429,
+                        lineNumber: 499,
                         columnNumber: 11
                     }, this),
-                    activeTab === 'patients' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    activeTab === "patients" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "space-y-8",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid gap-8 lg:grid-cols-3",
@@ -678,14 +687,14 @@ function Dashboard() {
                                                         className: "h-5 w-5 text-teal-600"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 445,
+                                                        lineNumber: 520,
                                                         columnNumber: 21
                                                     }, this),
                                                     "Patient Lookup Directory"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 444,
+                                                lineNumber: 519,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -700,12 +709,12 @@ function Dashboard() {
                                                                     className: "h-4 w-4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 453,
+                                                                    lineNumber: 528,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 452,
+                                                                lineNumber: 527,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -716,13 +725,13 @@ function Dashboard() {
                                                                 className: "block w-full pl-9 pr-3 py-2 border border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 455,
+                                                                lineNumber: 530,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 451,
+                                                        lineNumber: 526,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -735,7 +744,7 @@ function Dashboard() {
                                                                 children: "All Genders"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 469,
+                                                                lineNumber: 544,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -743,7 +752,7 @@ function Dashboard() {
                                                                 children: "Male"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 470,
+                                                                lineNumber: 545,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -751,7 +760,7 @@ function Dashboard() {
                                                                 children: "Female"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 471,
+                                                                lineNumber: 546,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -759,19 +768,19 @@ function Dashboard() {
                                                                 children: "Other"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 472,
+                                                                lineNumber: 547,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 464,
+                                                        lineNumber: 539,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 450,
+                                                lineNumber: 525,
                                                 columnNumber: 19
                                             }, this),
                                             patientsLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -779,14 +788,14 @@ function Dashboard() {
                                                 children: "Synchronizing table data..."
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 478,
+                                                lineNumber: 553,
                                                 columnNumber: 21
                                             }, this) : patients.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-center py-6 text-slate-400 text-sm",
                                                 children: "No registered patients match this filter."
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 480,
+                                                lineNumber: 557,
                                                 columnNumber: 21
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "overflow-x-auto",
@@ -802,7 +811,7 @@ function Dashboard() {
                                                                         children: "Name"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                        lineNumber: 486,
+                                                                        lineNumber: 565,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -810,7 +819,7 @@ function Dashboard() {
                                                                         children: "Contact"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                        lineNumber: 487,
+                                                                        lineNumber: 566,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -818,7 +827,7 @@ function Dashboard() {
                                                                         children: "Age/Sex"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                        lineNumber: 488,
+                                                                        lineNumber: 567,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -826,18 +835,18 @@ function Dashboard() {
                                                                         children: "Actions"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                        lineNumber: 489,
+                                                                        lineNumber: 568,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 485,
+                                                                lineNumber: 564,
                                                                 columnNumber: 27
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 484,
+                                                            lineNumber: 563,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -854,13 +863,13 @@ function Dashboard() {
                                                                                     children: p.email
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                                    lineNumber: 497,
-                                                                                    columnNumber: 45
+                                                                                    lineNumber: 580,
+                                                                                    columnNumber: 35
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                            lineNumber: 495,
+                                                                            lineNumber: 577,
                                                                             columnNumber: 31
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -868,26 +877,27 @@ function Dashboard() {
                                                                             children: p.phoneNumber
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                            lineNumber: 499,
+                                                                            lineNumber: 585,
                                                                             columnNumber: 31
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                             className: "py-3.5 text-slate-500 dark:text-slate-400",
                                                                             children: [
                                                                                 p.age,
-                                                                                " yrs / ",
+                                                                                " yrs /",
+                                                                                " ",
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                     className: "capitalize",
                                                                                     children: p.gender
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                                    lineNumber: 501,
-                                                                                    columnNumber: 47
+                                                                                    lineNumber: 590,
+                                                                                    columnNumber: 33
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                            lineNumber: 500,
+                                                                            lineNumber: 588,
                                                                             columnNumber: 31
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -899,7 +909,7 @@ function Dashboard() {
                                                                                     children: "Check In"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                                    lineNumber: 504,
+                                                                                    lineNumber: 593,
                                                                                     columnNumber: 33
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -910,40 +920,40 @@ function Dashboard() {
                                                                                         className: "h-3.5 w-3.5"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                                        lineNumber: 517,
+                                                                                        lineNumber: 608,
                                                                                         columnNumber: 35
                                                                                     }, this)
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                                    lineNumber: 512,
+                                                                                    lineNumber: 603,
                                                                                     columnNumber: 33
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                            lineNumber: 503,
+                                                                            lineNumber: 592,
                                                                             columnNumber: 31
                                                                         }, this)
                                                                     ]
                                                                 }, p.id, true, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 494,
+                                                                    lineNumber: 573,
                                                                     columnNumber: 29
                                                                 }, this))
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 492,
+                                                            lineNumber: 571,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 483,
+                                                    lineNumber: 562,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 482,
+                                                lineNumber: 561,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -954,12 +964,13 @@ function Dashboard() {
                                                         children: [
                                                             "Page ",
                                                             patientsPagination.page,
-                                                            " of ",
+                                                            " of",
+                                                            " ",
                                                             patientsPagination.totalPages
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 529,
+                                                        lineNumber: 620,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -972,7 +983,7 @@ function Dashboard() {
                                                                 children: "Prev"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 533,
+                                                                lineNumber: 625,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -982,30 +993,30 @@ function Dashboard() {
                                                                 children: "Next"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 540,
+                                                                lineNumber: 634,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 532,
+                                                        lineNumber: 624,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 528,
+                                                lineNumber: 619,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 443,
+                                        lineNumber: 518,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                    lineNumber: 442,
+                                    lineNumber: 517,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1018,22 +1029,22 @@ function Dashboard() {
                                                     className: "h-5 w-5 text-teal-600"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 555,
+                                                    lineNumber: 654,
                                                     columnNumber: 19
                                                 }, this),
                                                 "New Registration"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                            lineNumber: 554,
+                                            lineNumber: 653,
                                             columnNumber: 17
                                         }, this),
                                         regMessage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: `p-3 text-sm rounded-lg mb-4 ${regMessage.startsWith('Success') ? 'bg-teal-500/15 text-teal-600 dark:text-teal-400 border border-teal-500/20' : 'bg-rose-500/15 text-rose-500 border border-rose-500/20'}`,
+                                            className: `p-3 text-sm rounded-lg mb-4 ${regMessage.startsWith("Success") ? "bg-teal-500/15 text-teal-600 dark:text-teal-400 border border-teal-500/20" : "bg-rose-500/15 text-rose-500 border border-rose-500/20"}`,
                                             children: regMessage
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                            lineNumber: 560,
+                                            lineNumber: 659,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -1047,7 +1058,7 @@ function Dashboard() {
                                                             children: "Patient Full Name*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 567,
+                                                            lineNumber: 675,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1059,13 +1070,13 @@ function Dashboard() {
                                                             className: "block w-full px-3 py-2 border border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 rounded-lg text-slate-900 dark:text-slate-100 text-sm focus:outline-none"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 568,
+                                                            lineNumber: 676,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 566,
+                                                    lineNumber: 674,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1078,7 +1089,7 @@ function Dashboard() {
                                                                     children: "Age (Years)*"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 580,
+                                                                    lineNumber: 688,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1090,13 +1101,13 @@ function Dashboard() {
                                                                     className: "block w-full px-3 py-2 border border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 rounded-lg text-slate-900 dark:text-slate-100 text-sm focus:outline-none"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 581,
+                                                                    lineNumber: 689,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 579,
+                                                            lineNumber: 687,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1106,7 +1117,7 @@ function Dashboard() {
                                                                     children: "Gender*"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 591,
+                                                                    lineNumber: 699,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1119,7 +1130,7 @@ function Dashboard() {
                                                                             children: "Male"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                            lineNumber: 597,
+                                                                            lineNumber: 705,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1127,7 +1138,7 @@ function Dashboard() {
                                                                             children: "Female"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                            lineNumber: 598,
+                                                                            lineNumber: 706,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1135,25 +1146,25 @@ function Dashboard() {
                                                                             children: "Other"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                            lineNumber: 599,
+                                                                            lineNumber: 707,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 592,
+                                                                    lineNumber: 700,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 590,
+                                                            lineNumber: 698,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 578,
+                                                    lineNumber: 686,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1163,7 +1174,7 @@ function Dashboard() {
                                                             children: "Contact Phone*"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 605,
+                                                            lineNumber: 713,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1175,13 +1186,13 @@ function Dashboard() {
                                                             className: "block w-full px-3 py-2 border border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 rounded-lg text-slate-900 dark:text-slate-100 text-sm focus:outline-none"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 606,
+                                                            lineNumber: 714,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 604,
+                                                    lineNumber: 712,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1191,7 +1202,7 @@ function Dashboard() {
                                                             children: "Email Address"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 617,
+                                                            lineNumber: 725,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1202,13 +1213,13 @@ function Dashboard() {
                                                             className: "block w-full px-3 py-2 border border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 rounded-lg text-slate-900 dark:text-slate-100 text-sm focus:outline-none"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 618,
+                                                            lineNumber: 726,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 616,
+                                                    lineNumber: 724,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1218,7 +1229,7 @@ function Dashboard() {
                                                             children: "Medical Anamnesis / History (Can be left blank)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 628,
+                                                            lineNumber: 736,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -1229,13 +1240,13 @@ function Dashboard() {
                                                             className: "block w-full px-3 py-2 border border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 rounded-lg text-slate-900 dark:text-slate-100 text-sm focus:outline-none"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 629,
+                                                            lineNumber: 739,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 627,
+                                                    lineNumber: 735,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1244,33 +1255,33 @@ function Dashboard() {
                                                     children: "Register Patient Record"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 638,
+                                                    lineNumber: 748,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                            lineNumber: 565,
+                                            lineNumber: 670,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                    lineNumber: 553,
+                                    lineNumber: 652,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                            lineNumber: 440,
+                            lineNumber: 515,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                        lineNumber: 439,
+                        lineNumber: 514,
                         columnNumber: 11
                     }, this),
-                    activeTab === 'book' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    activeTab === "book" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "grid gap-8 lg:grid-cols-2",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1283,22 +1294,22 @@ function Dashboard() {
                                                 className: "h-5 w-5 text-teal-600"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 658,
+                                                lineNumber: 768,
                                                 columnNumber: 17
                                             }, this),
                                             "Schedule Appointment Slot"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 657,
+                                        lineNumber: 767,
                                         columnNumber: 15
                                     }, this),
                                     bookingMessage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: `p-3 text-sm rounded-lg mb-4 ${bookingMessage.startsWith('Success') ? 'bg-teal-500/15 text-teal-600 dark:text-teal-400 border border-teal-500/20' : 'bg-rose-500/15 text-rose-500 border border-rose-500/20'}`,
+                                        className: `p-3 text-sm rounded-lg mb-4 ${bookingMessage.startsWith("Success") ? "bg-teal-500/15 text-teal-600 dark:text-teal-400 border border-teal-500/20" : "bg-rose-500/15 text-rose-500 border border-rose-500/20"}`,
                                         children: bookingMessage
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 663,
+                                        lineNumber: 773,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -1312,7 +1323,7 @@ function Dashboard() {
                                                         children: "Select Registered Patient*"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 670,
+                                                        lineNumber: 789,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1326,7 +1337,7 @@ function Dashboard() {
                                                                 children: "-- Choose Patient --"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 677,
+                                                                lineNumber: 798,
                                                                 columnNumber: 21
                                                             }, this),
                                                             patients.map((p)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1339,13 +1350,13 @@ function Dashboard() {
                                                                     ]
                                                                 }, p.id, true, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 679,
+                                                                    lineNumber: 800,
                                                                     columnNumber: 23
                                                                 }, this))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 671,
+                                                        lineNumber: 792,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1353,13 +1364,13 @@ function Dashboard() {
                                                         children: "If client is missing, register them in the Directory tab first."
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 682,
+                                                        lineNumber: 805,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 669,
+                                                lineNumber: 788,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1369,7 +1380,7 @@ function Dashboard() {
                                                         children: "Select Physician*"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 686,
+                                                        lineNumber: 812,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1383,7 +1394,7 @@ function Dashboard() {
                                                                 children: "-- Choose Physician --"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 693,
+                                                                lineNumber: 819,
                                                                 columnNumber: 21
                                                             }, this),
                                                             doctorsList.map((d)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1398,19 +1409,19 @@ function Dashboard() {
                                                                     ]
                                                                 }, d.id, true, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 695,
+                                                                    lineNumber: 821,
                                                                     columnNumber: 23
                                                                 }, this))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 687,
+                                                        lineNumber: 813,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 685,
+                                                lineNumber: 811,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1420,7 +1431,7 @@ function Dashboard() {
                                                         children: "Appointment Date & Time*"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 701,
+                                                        lineNumber: 829,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1431,13 +1442,13 @@ function Dashboard() {
                                                         className: "block w-full px-3 py-2 border border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 rounded-lg text-slate-900 dark:text-slate-100 text-sm focus:outline-none"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 702,
+                                                        lineNumber: 830,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 700,
+                                                lineNumber: 828,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1447,7 +1458,7 @@ function Dashboard() {
                                                         children: "Consultation Objective / Reason"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 712,
+                                                        lineNumber: 840,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1458,13 +1469,13 @@ function Dashboard() {
                                                         className: "block w-full px-3 py-2 border border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 rounded-lg text-slate-900 dark:text-slate-100 text-sm focus:outline-none"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 713,
+                                                        lineNumber: 843,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 711,
+                                                lineNumber: 839,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1473,19 +1484,19 @@ function Dashboard() {
                                                 children: "Book Appointment Slot"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 722,
+                                                lineNumber: 852,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 668,
+                                        lineNumber: 784,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                lineNumber: 656,
+                                lineNumber: 766,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1498,14 +1509,14 @@ function Dashboard() {
                                                 className: "h-5 w-5 text-teal-600"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 734,
+                                                lineNumber: 864,
                                                 columnNumber: 17
                                             }, this),
                                             "Active Direct Queue Check-In"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 733,
+                                        lineNumber: 863,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1513,7 +1524,7 @@ function Dashboard() {
                                         children: "Generate an immediate waiting token for a direct walk-in patient. Allocates active positions under selected practitioners."
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 737,
+                                        lineNumber: 867,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1526,7 +1537,7 @@ function Dashboard() {
                                                         children: "Token Generation Engine Note:"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 743,
+                                                        lineNumber: 875,
                                                         columnNumber: 19
                                                     }, this),
                                                     " Direct arrivals bypass appointments. The token engine automatically fetches the current days maximum token size and increments.",
@@ -1535,13 +1546,13 @@ function Dashboard() {
                                                         children: "Warning: Vulnerable to check-in race conditions!"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 744,
+                                                        lineNumber: 878,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 742,
+                                                lineNumber: 874,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1554,7 +1565,7 @@ function Dashboard() {
                                                                 children: "Select Walk-in Patient*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 749,
+                                                                lineNumber: 885,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1566,7 +1577,7 @@ function Dashboard() {
                                                                         children: "-- Choose Patient --"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                        lineNumber: 754,
+                                                                        lineNumber: 892,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     patients.map((p)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1574,19 +1585,19 @@ function Dashboard() {
                                                                             children: p.name
                                                                         }, p.id, false, {
                                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                            lineNumber: 756,
+                                                                            lineNumber: 894,
                                                                             columnNumber: 25
                                                                         }, this))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 750,
+                                                                lineNumber: 888,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 748,
+                                                        lineNumber: 884,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1596,7 +1607,7 @@ function Dashboard() {
                                                                 children: "Assign Physician*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 762,
+                                                                lineNumber: 902,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1608,7 +1619,7 @@ function Dashboard() {
                                                                         children: "-- Choose Physician --"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                        lineNumber: 767,
+                                                                        lineNumber: 907,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     doctorsList.map((d)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1621,27 +1632,27 @@ function Dashboard() {
                                                                             ]
                                                                         }, d.id, true, {
                                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                            lineNumber: 769,
+                                                                            lineNumber: 909,
                                                                             columnNumber: 25
                                                                         }, this))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 763,
+                                                                lineNumber: 903,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 761,
+                                                        lineNumber: 901,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                         onClick: ()=>{
-                                                            const pId = document.getElementById('walkin-patient').value;
-                                                            const dId = document.getElementById('walkin-doctor').value;
+                                                            const pId = document.getElementById("walkin-patient").value;
+                                                            const dId = document.getElementById("walkin-doctor").value;
                                                             if (!pId || !dId) {
-                                                                alert('Select patient and doctor first');
+                                                                alert("Select patient and doctor first");
                                                                 return;
                                                             }
                                                             handleQueueCheckin(pId, dId);
@@ -1650,34 +1661,34 @@ function Dashboard() {
                                                         children: "Generate Live Token"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 774,
+                                                        lineNumber: 916,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 747,
+                                                lineNumber: 883,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 741,
+                                        lineNumber: 873,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                lineNumber: 732,
+                                lineNumber: 862,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                        lineNumber: 654,
+                        lineNumber: 764,
                         columnNumber: 11
                     }, this),
-                    activeTab === 'appointments' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    activeTab === "appointments" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "space-y-6",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1690,14 +1701,14 @@ function Dashboard() {
                                                 className: "h-5 w-5 text-teal-600"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 801,
+                                                lineNumber: 945,
                                                 columnNumber: 17
                                             }, this),
                                             "Scheduled Daily Bookings List"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 800,
+                                        lineNumber: 944,
                                         columnNumber: 15
                                     }, this),
                                     doctorAppointments.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1705,7 +1716,7 @@ function Dashboard() {
                                         children: "No appointments scheduled for you today."
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 806,
+                                        lineNumber: 950,
                                         columnNumber: 17
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "overflow-x-auto",
@@ -1721,7 +1732,7 @@ function Dashboard() {
                                                                 children: "Time"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 812,
+                                                                lineNumber: 958,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -1729,7 +1740,7 @@ function Dashboard() {
                                                                 children: "Patient"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 813,
+                                                                lineNumber: 959,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -1737,7 +1748,7 @@ function Dashboard() {
                                                                 children: "Consultation Reason"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 814,
+                                                                lineNumber: 960,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -1745,7 +1756,7 @@ function Dashboard() {
                                                                 children: "Status"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 815,
+                                                                lineNumber: 961,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -1753,18 +1764,18 @@ function Dashboard() {
                                                                 children: "Actions"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 816,
+                                                                lineNumber: 962,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 811,
+                                                        lineNumber: 957,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 810,
+                                                    lineNumber: 956,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -1775,12 +1786,12 @@ function Dashboard() {
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                     className: "py-3.5 font-mono font-bold text-slate-800 dark:text-slate-200",
                                                                     children: new Date(app.appointmentDate).toLocaleTimeString([], {
-                                                                        hour: '2-digit',
-                                                                        minute: '2-digit'
+                                                                        hour: "2-digit",
+                                                                        minute: "2-digit"
                                                                     })
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 822,
+                                                                    lineNumber: 971,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -1789,10 +1800,10 @@ function Dashboard() {
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                                             onClick: ()=>setSelectedPatientHistory(app.patient),
                                                                             className: "font-bold text-teal-600 hover:underline hover:text-teal-700 transition-colors",
-                                                                            children: app.patient ? app.patient.name : 'Unknown Patient'
+                                                                            children: app.patient ? app.patient.name : "Unknown Patient"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                            lineNumber: 826,
+                                                                            lineNumber: 978,
                                                                             columnNumber: 29
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1803,41 +1814,41 @@ function Dashboard() {
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                            lineNumber: 832,
+                                                                            lineNumber: 988,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 825,
+                                                                    lineNumber: 977,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                     className: "py-3.5 text-slate-500 dark:text-slate-400 font-semibold",
-                                                                    children: app.reason || 'None provided'
+                                                                    children: app.reason || "None provided"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 834,
+                                                                    lineNumber: 992,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                     className: "py-3.5",
                                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        className: `inline-flex px-2 py-0.5 rounded text-xxs font-extrabold tracking-wide uppercase ${app.status === 'COMPLETED' ? 'bg-teal-500/10 text-teal-600' : app.status === 'CANCELLED' ? 'bg-rose-500/10 text-rose-500' : 'bg-amber-500/10 text-amber-500'}`,
+                                                                        className: `inline-flex px-2 py-0.5 rounded text-xxs font-extrabold tracking-wide uppercase ${app.status === "COMPLETED" ? "bg-teal-500/10 text-teal-600" : app.status === "CANCELLED" ? "bg-rose-500/10 text-rose-500" : "bg-amber-500/10 text-amber-500"}`,
                                                                         children: app.status
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                        lineNumber: 836,
+                                                                        lineNumber: 996,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 835,
+                                                                    lineNumber: 995,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                     className: "py-3.5 text-right space-x-2",
-                                                                    children: app.status === 'PENDING' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                                                                    children: app.status === "PENDING" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                                                                         children: [
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                                                 onClick: ()=>{
@@ -1848,7 +1859,7 @@ function Dashboard() {
                                                                                 children: "Check In Patient"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                                lineNumber: 843,
+                                                                                lineNumber: 1011,
                                                                                 columnNumber: 33
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1857,42 +1868,42 @@ function Dashboard() {
                                                                                 children: "Complete"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                                lineNumber: 852,
+                                                                                lineNumber: 1026,
                                                                                 columnNumber: 33
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 840,
+                                                                    lineNumber: 1008,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, app.id, true, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 821,
+                                                            lineNumber: 967,
                                                             columnNumber: 25
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 819,
+                                                    lineNumber: 965,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                            lineNumber: 809,
+                                            lineNumber: 955,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 808,
+                                        lineNumber: 954,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                lineNumber: 799,
+                                lineNumber: 943,
                                 columnNumber: 13
                             }, this),
                             selectedPatientHistory && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1911,7 +1922,7 @@ function Dashboard() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 874,
+                                                        lineNumber: 1050,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1919,18 +1930,19 @@ function Dashboard() {
                                                         children: [
                                                             "Gender: ",
                                                             selectedPatientHistory.gender,
-                                                            " | Contact: ",
+                                                            " | Contact:",
+                                                            " ",
                                                             selectedPatientHistory.phoneNumber
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 877,
+                                                        lineNumber: 1053,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 873,
+                                                lineNumber: 1049,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1939,13 +1951,13 @@ function Dashboard() {
                                                 children: "Close"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 881,
+                                                lineNumber: 1058,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 872,
+                                        lineNumber: 1048,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1956,21 +1968,21 @@ function Dashboard() {
                                                 children: "Clinical Background Information"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 890,
+                                                lineNumber: 1067,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-slate-700 dark:text-slate-300 leading-5 text-sm font-semibold",
-                                                children: selectedPatientHistory.medicalHistory.toUpperCase()
+                                                children: selectedPatientHistory.medicalHistory ? selectedPatientHistory.medicalHistory.toUpperCase() : `No medical history on record`
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 896,
+                                                lineNumber: 1075,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 889,
+                                        lineNumber: 1066,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1984,33 +1996,33 @@ function Dashboard() {
                                                     className: "h-3 w-3"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 908,
+                                                    lineNumber: 1089,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                            lineNumber: 903,
+                                            lineNumber: 1084,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 901,
+                                        lineNumber: 1082,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                lineNumber: 871,
+                                lineNumber: 1047,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                        lineNumber: 798,
+                        lineNumber: 942,
                         columnNumber: 11
                     }, this),
-                    activeTab === 'queue' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    activeTab === "queue" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "glass p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-md",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2020,14 +2032,14 @@ function Dashboard() {
                                         className: "h-5 w-5 text-teal-600"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 922,
+                                        lineNumber: 1103,
                                         columnNumber: 15
                                     }, this),
                                     "Active Operations Queue Controller"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                lineNumber: 921,
+                                lineNumber: 1102,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2035,7 +2047,7 @@ function Dashboard() {
                                 children: "Manage patient call sequences for live monitors. Update status from waiting to active calling."
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                lineNumber: 925,
+                                lineNumber: 1106,
                                 columnNumber: 13
                             }, this),
                             doctorQueue.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2043,12 +2055,12 @@ function Dashboard() {
                                 children: "No checked-in patients in queue today."
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                lineNumber: 930,
+                                lineNumber: 1112,
                                 columnNumber: 15
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "grid gap-4 sm:grid-cols-2 lg:grid-cols-3",
                                 children: doctorQueue.map((t)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: `p-5 rounded-2xl border shadow-md relative overflow-hidden flex flex-col justify-between ${t.status === 'CALLING' ? 'border-teal-500 bg-teal-500/10' : 'border-slate-200 dark:border-slate-800 bg-slate-500/5'}`,
+                                        className: `p-5 rounded-2xl border shadow-md relative overflow-hidden flex flex-col justify-between ${t.status === "CALLING" ? "border-teal-500 bg-teal-500/10" : "border-slate-200 dark:border-slate-800 bg-slate-500/5"}`,
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex justify-between items-start",
@@ -2061,21 +2073,21 @@ function Dashboard() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 939,
+                                                        lineNumber: 1127,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: `px-2 py-0.5 rounded text-xxs font-extrabold tracking-wide uppercase ${t.status === 'CALLING' ? 'bg-teal-500 text-white' : t.status === 'COMPLETED' ? 'bg-teal-500/10 text-teal-600' : 'bg-amber-500/10 text-amber-500'}`,
+                                                        className: `px-2 py-0.5 rounded text-xxs font-extrabold tracking-wide uppercase ${t.status === "CALLING" ? "bg-teal-500 text-white" : t.status === "COMPLETED" ? "bg-teal-500/10 text-teal-600" : "bg-amber-500/10 text-amber-500"}`,
                                                         children: t.status
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 940,
+                                                        lineNumber: 1130,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 938,
+                                                lineNumber: 1126,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2086,7 +2098,7 @@ function Dashboard() {
                                                         children: t.patient.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 946,
+                                                        lineNumber: 1144,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2097,45 +2109,45 @@ function Dashboard() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 947,
+                                                        lineNumber: 1147,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 945,
+                                                lineNumber: 1143,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "mt-6 flex gap-2",
                                                 children: [
-                                                    t.status === 'WAITING' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                        onClick: ()=>handleUpdateQueueStatus(t.id, 'CALLING'),
+                                                    t.status === "WAITING" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                        onClick: ()=>handleUpdateQueueStatus(t.id, "CALLING"),
                                                         className: "flex-1 py-1.5 bg-teal-600 text-white font-bold text-xxs rounded hover:bg-teal-700 transition-colors",
                                                         children: "Call Patient"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 952,
+                                                        lineNumber: 1154,
                                                         columnNumber: 25
                                                     }, this),
-                                                    t.status === 'CALLING' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                                                    t.status === "CALLING" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                onClick: ()=>handleUpdateQueueStatus(t.id, 'COMPLETED'),
+                                                                onClick: ()=>handleUpdateQueueStatus(t.id, "COMPLETED"),
                                                                 className: "flex-1 py-1.5 bg-teal-600 text-white font-bold text-xxs rounded hover:bg-teal-700 transition-colors",
                                                                 children: "Consulted"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 961,
+                                                                lineNumber: 1165,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                onClick: ()=>handleUpdateQueueStatus(t.id, 'SKIPPED'),
+                                                                onClick: ()=>handleUpdateQueueStatus(t.id, "SKIPPED"),
                                                                 className: "flex-1 py-1.5 bg-rose-500/10 text-rose-500 font-bold text-xxs rounded hover:bg-rose-500 hover:text-white transition-colors",
                                                                 children: "Skip / No Show"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 967,
+                                                                lineNumber: 1173,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
@@ -2143,27 +2155,27 @@ function Dashboard() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 950,
+                                                lineNumber: 1152,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, t.id, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 934,
+                                        lineNumber: 1118,
                                         columnNumber: 19
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                lineNumber: 932,
+                                lineNumber: 1116,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                        lineNumber: 920,
+                        lineNumber: 1101,
                         columnNumber: 11
                     }, this),
-                    activeTab === 'reports' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    activeTab === "reports" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "space-y-8",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "glass p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-md",
@@ -2180,14 +2192,14 @@ function Dashboard() {
                                                             className: "h-5 w-5 text-teal-600"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 992,
+                                                            lineNumber: 1200,
                                                             columnNumber: 21
                                                         }, this),
                                                         "Doctor Revenue & Operations Report"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 991,
+                                                    lineNumber: 1199,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2195,29 +2207,29 @@ function Dashboard() {
                                                     children: "System-wide practitioner performance audits. Computes completed bookings and potential sales."
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 995,
+                                                    lineNumber: 1203,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                            lineNumber: 990,
+                                            lineNumber: 1198,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: generateSystemReport,
                                             disabled: adminReportLoading,
                                             className: "glow-btn px-4 py-2 bg-teal-600 text-white font-extrabold text-xs rounded-lg shadow hover:bg-teal-700 disabled:opacity-50 transition-colors",
-                                            children: adminReportLoading ? 'Aggregating...' : 'Load Doctor System Audit Report'
+                                            children: adminReportLoading ? "Aggregating..." : "Load Doctor System Audit Report"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                            lineNumber: 999,
+                                            lineNumber: 1208,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                    lineNumber: 989,
+                                    lineNumber: 1197,
                                     columnNumber: 15
                                 }, this),
                                 adminReportLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2228,18 +2240,18 @@ function Dashboard() {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {}, void 0, false, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 1011,
+                                                    lineNumber: 1222,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {}, void 0, false, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 1012,
+                                                    lineNumber: 1223,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                            lineNumber: 1010,
+                                            lineNumber: 1221,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2247,20 +2259,20 @@ function Dashboard() {
                                             children: "Executing sequential nested loop aggregates. Event loop is locked..."
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                            lineNumber: 1014,
+                                            lineNumber: 1225,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                    lineNumber: 1009,
+                                    lineNumber: 1220,
                                     columnNumber: 17
                                 }, this) : !adminReportData ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "p-8 text-center bg-slate-100 dark:bg-slate-800/40 rounded-xl text-slate-400 text-xs font-semibold border border-dashed border-slate-200 dark:border-slate-700",
                                     children: "Click the button above to load reports. Warning: Endpoint is extremely slow on larger doctor count tables!"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                    lineNumber: 1019,
+                                    lineNumber: 1231,
                                     columnNumber: 17
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "space-y-6",
@@ -2272,7 +2284,7 @@ function Dashboard() {
                                                     className: "h-5 w-5 text-amber-500 shrink-0"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 1026,
+                                                    lineNumber: 1239,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2281,11 +2293,11 @@ function Dashboard() {
                                                             children: "Performance Diagnostic:"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 1028,
+                                                            lineNumber: 1241,
                                                             columnNumber: 23
                                                         }, this),
                                                         " API execution resolved in",
-                                                        ' ',
+                                                        " ",
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "font-bold text-amber-500",
                                                             children: [
@@ -2294,20 +2306,20 @@ function Dashboard() {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 1029,
+                                                            lineNumber: 1243,
                                                             columnNumber: 23
                                                         }, this),
                                                         ". Sequential nested database calls loops reduce throughput. Optimization using Promise.all or single join aggregate is required."
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 1027,
+                                                    lineNumber: 1240,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                            lineNumber: 1025,
+                                            lineNumber: 1238,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2321,7 +2333,7 @@ function Dashboard() {
                                                             children: "Total Physicians"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 1037,
+                                                            lineNumber: 1255,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -2329,13 +2341,13 @@ function Dashboard() {
                                                             children: adminReportData.data.length
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 1038,
+                                                            lineNumber: 1258,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 1036,
+                                                    lineNumber: 1254,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2346,7 +2358,7 @@ function Dashboard() {
                                                             children: "Sum appointments"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 1041,
+                                                            lineNumber: 1263,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -2354,13 +2366,13 @@ function Dashboard() {
                                                             children: adminReportData.data.reduce((sum, item)=>sum + item.totalAppointments, 0)
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 1042,
+                                                            lineNumber: 1266,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 1040,
+                                                    lineNumber: 1262,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2371,7 +2383,7 @@ function Dashboard() {
                                                             children: "Total Sales ($)"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 1047,
+                                                            lineNumber: 1274,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -2382,19 +2394,19 @@ function Dashboard() {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 1048,
+                                                            lineNumber: 1277,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 1046,
+                                                    lineNumber: 1273,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                            lineNumber: 1035,
+                                            lineNumber: 1253,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2411,7 +2423,7 @@ function Dashboard() {
                                                                     children: "Doctor"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 1059,
+                                                                    lineNumber: 1292,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2419,7 +2431,7 @@ function Dashboard() {
                                                                     children: "Department"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 1060,
+                                                                    lineNumber: 1293,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2427,7 +2439,7 @@ function Dashboard() {
                                                                     children: "Consultations"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 1061,
+                                                                    lineNumber: 1294,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2435,7 +2447,7 @@ function Dashboard() {
                                                                     children: "Today Queue"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 1062,
+                                                                    lineNumber: 1295,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2443,18 +2455,18 @@ function Dashboard() {
                                                                     children: "Revenue"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                    lineNumber: 1063,
+                                                                    lineNumber: 1296,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                            lineNumber: 1058,
+                                                            lineNumber: 1291,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 1057,
+                                                        lineNumber: 1290,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -2471,13 +2483,13 @@ function Dashboard() {
                                                                                 children: item.specialization
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                                lineNumber: 1071,
+                                                                                lineNumber: 1307,
                                                                                 columnNumber: 31
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                        lineNumber: 1069,
+                                                                        lineNumber: 1305,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2485,20 +2497,21 @@ function Dashboard() {
                                                                         children: item.department
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                        lineNumber: 1073,
+                                                                        lineNumber: 1311,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                         className: "py-3.5 text-center text-slate-500 dark:text-slate-400",
                                                                         children: [
                                                                             item.completedAppointments,
-                                                                            " Completed / ",
+                                                                            " Completed /",
+                                                                            " ",
                                                                             item.totalAppointments,
                                                                             " Total"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                        lineNumber: 1074,
+                                                                        lineNumber: 1314,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2509,7 +2522,7 @@ function Dashboard() {
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                        lineNumber: 1077,
+                                                                        lineNumber: 1318,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2520,49 +2533,49 @@ function Dashboard() {
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                        lineNumber: 1078,
+                                                                        lineNumber: 1321,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 ]
                                                             }, item.id, true, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                                lineNumber: 1068,
+                                                                lineNumber: 1301,
                                                                 columnNumber: 27
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 1066,
+                                                        lineNumber: 1299,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 1056,
+                                                lineNumber: 1289,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                            lineNumber: 1055,
+                                            lineNumber: 1288,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                    lineNumber: 1023,
+                                    lineNumber: 1236,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                            lineNumber: 988,
+                            lineNumber: 1196,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                        lineNumber: 987,
+                        lineNumber: 1195,
                         columnNumber: 11
                     }, this),
-                    activeTab === 'physicians' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    activeTab === "physicians" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "glass p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-md space-y-6",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2574,14 +2587,14 @@ function Dashboard() {
                                                 className: "h-5 w-5 text-teal-600"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 1097,
+                                                lineNumber: 1342,
                                                 columnNumber: 17
                                             }, this),
                                             "Staff Physicians Registry Lookup"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 1096,
+                                        lineNumber: 1341,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2589,13 +2602,13 @@ function Dashboard() {
                                         children: "Database lookup for credentials. Uses a raw SQL interpolation backend query."
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 1100,
+                                        lineNumber: 1345,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                lineNumber: 1095,
+                                lineNumber: 1340,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2610,12 +2623,12 @@ function Dashboard() {
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                    lineNumber: 1108,
+                                                    lineNumber: 1354,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 1107,
+                                                lineNumber: 1353,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -2626,13 +2639,13 @@ function Dashboard() {
                                                 className: "block w-full pl-9 pr-3 py-2 border border-slate-300 dark:border-slate-700 bg-white/50 dark:bg-slate-900/50 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 1110,
+                                                lineNumber: 1356,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 1106,
+                                        lineNumber: 1352,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2641,13 +2654,13 @@ function Dashboard() {
                                         children: "Execute SQL Query"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 1119,
+                                        lineNumber: 1365,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                lineNumber: 1105,
+                                lineNumber: 1351,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2657,7 +2670,7 @@ function Dashboard() {
                                         className: "h-5 w-5 shrink-0"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 1128,
+                                        lineNumber: 1374,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2666,7 +2679,7 @@ function Dashboard() {
                                                 children: "SQL Vulnerability alert:"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 1130,
+                                                lineNumber: 1376,
                                                 columnNumber: 17
                                             }, this),
                                             " This search executes raw interpolation:",
@@ -2675,20 +2688,20 @@ function Dashboard() {
                                                 children: "SELECT * FROM \"Doctor\" WHERE name ILIKE '%{query}%'                "
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 1131,
+                                                lineNumber: 1378,
                                                 columnNumber: 17
                                             }, this),
                                             "Can be audited by inputting standard SQL injection strings to leak full user login lists."
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 1129,
+                                        lineNumber: 1375,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                lineNumber: 1127,
+                                lineNumber: 1373,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2703,7 +2716,7 @@ function Dashboard() {
                                                         children: doc.department
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 1146,
+                                                        lineNumber: 1395,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -2711,7 +2724,7 @@ function Dashboard() {
                                                         children: doc.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 1149,
+                                                        lineNumber: 1398,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2719,13 +2732,13 @@ function Dashboard() {
                                                         children: doc.specialization
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 1150,
+                                                        lineNumber: 1401,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 1145,
+                                                lineNumber: 1394,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2739,7 +2752,7 @@ function Dashboard() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 1153,
+                                                        lineNumber: 1406,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2750,42 +2763,42 @@ function Dashboard() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                        lineNumber: 1154,
+                                                        lineNumber: 1407,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                                lineNumber: 1152,
+                                                lineNumber: 1405,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, doc.id, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                        lineNumber: 1141,
+                                        lineNumber: 1390,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                                lineNumber: 1139,
+                                lineNumber: 1388,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                        lineNumber: 1094,
+                        lineNumber: 1339,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-                lineNumber: 371,
+                lineNumber: 418,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/dashboard/page.js",
-        lineNumber: 368,
+        lineNumber: 415,
         columnNumber: 5
     }, this);
 }

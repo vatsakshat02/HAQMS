@@ -197,7 +197,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQM
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__ = __turbopack_context__.i("[project]/Documents/Figital/HAQMS/frontend/node_modules/lucide-react/dist/esm/icons/circle-alert.mjs [app-client] (ecmascript) <export default as AlertCircle>");
 ;
 var _s = __turbopack_context__.k.signature();
-'use client';
+"use client";
 ;
 ;
 ;
@@ -205,24 +205,24 @@ function QueueMonitor() {
     _s();
     const [tokens, setTokens] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
-    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('');
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     // Duplicated config state just to add minor code smell
     const [refreshCount, setRefreshCount] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     // HARDCODED API BASE URL: Duplicated from AuthContext (code duplication smell)
-    const API_BASE_URL = 'http://localhost:5000/api';
+    const API_BASE_URL = "http://localhost:5000/api";
     const fetchQueueData = async ()=>{
         try {
-            // Insecure: Fetches queue without checking credentials (it's a public dashboard, which is fine, 
+            // Insecure: Fetches queue without checking credentials (it's a public dashboard, which is fine,
             // but it uses the hardcoded API domain)
             const res = await fetch(`${API_BASE_URL}/queue`);
             if (!res.ok) {
-                throw new Error('Failed to retrieve active token queue.');
+                throw new Error("Failed to retrieve active token queue.");
             }
             const data = await res.json();
             setTokens(data);
-            setError('');
+            setError("");
         } catch (err) {
-            console.error('Queue poll fetch error:', err);
+            console.error("Queue poll fetch error:", err);
             setError(err.message);
         } finally{
             setLoading(false);
@@ -247,8 +247,9 @@ function QueueMonitor() {
                     }["QueueMonitor.useEffect.intervalId"]);
                 }
             }["QueueMonitor.useEffect.intervalId"], 3000);
-        // Junior Developer Note: "Interval created, will run forever to keep dashboard fully synced!"
-        // Missing: return () => clearInterval(intervalId);
+            return ({
+                "QueueMonitor.useEffect": ()=>clearInterval(intervalId)
+            })["QueueMonitor.useEffect"];
         }
     }["QueueMonitor.useEffect"], []); // Note that refreshCount dependency is missing too, causing stale closure on log!
     // Group tokens by doctor
@@ -262,9 +263,9 @@ function QueueMonitor() {
                 waiting: []
             };
         }
-        if (token.status === 'CALLING') {
+        if (token.status === "CALLING") {
             groups[docId].calling = token;
-        } else if (token.status === 'WAITING') {
+        } else if (token.status === "WAITING") {
             groups[docId].waiting.push(token);
         }
         return groups;
@@ -274,7 +275,7 @@ function QueueMonitor() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$src$2f$components$2f$common$2f$Navbar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                lineNumber: 79,
+                lineNumber: 78,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -292,12 +293,12 @@ function QueueMonitor() {
                                             className: "h-6 w-6"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                            lineNumber: 86,
+                                            lineNumber: 85,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                        lineNumber: 85,
+                                        lineNumber: 84,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -307,7 +308,7 @@ function QueueMonitor() {
                                                 children: "Live Public Monitor Board"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                lineNumber: 89,
+                                                lineNumber: 88,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -315,19 +316,19 @@ function QueueMonitor() {
                                                 children: "Real-time physician calling boards. Auto-syncs every 3 seconds."
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                lineNumber: 92,
+                                                lineNumber: 91,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                        lineNumber: 88,
+                                        lineNumber: 87,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                lineNumber: 84,
+                                lineNumber: 83,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -340,14 +341,14 @@ function QueueMonitor() {
                                                 className: "h-3.5 w-3.5 animate-spin"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                lineNumber: 100,
+                                                lineNumber: 99,
                                                 columnNumber: 15
                                             }, this),
                                             "Auto Refreshing"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                        lineNumber: 99,
+                                        lineNumber: 98,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -358,19 +359,19 @@ function QueueMonitor() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                        lineNumber: 103,
+                                        lineNumber: 102,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                lineNumber: 98,
+                                lineNumber: 97,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                        lineNumber: 83,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, this),
                     error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -380,7 +381,7 @@ function QueueMonitor() {
                                 className: "h-5 w-5 shrink-0"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                lineNumber: 112,
+                                lineNumber: 111,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -389,7 +390,7 @@ function QueueMonitor() {
                                         children: "Sync Error:"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                        lineNumber: 114,
+                                        lineNumber: 113,
                                         columnNumber: 15
                                     }, this),
                                     " ",
@@ -398,13 +399,13 @@ function QueueMonitor() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                lineNumber: 113,
+                                lineNumber: 112,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                        lineNumber: 111,
+                        lineNumber: 110,
                         columnNumber: 11
                     }, this),
                     loading && tokens.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -449,7 +450,7 @@ function QueueMonitor() {
                                 className: "h-12 w-12 text-slate-400 mx-auto animate-bounce"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                lineNumber: 130,
+                                lineNumber: 132,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -457,7 +458,7 @@ function QueueMonitor() {
                                 children: "No Active Tokens"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                lineNumber: 131,
+                                lineNumber: 133,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -465,13 +466,13 @@ function QueueMonitor() {
                                 children: "There are currently no patient check-ins registered for today. Use the receptionist portal in the Staff Dashboard to check-in patients."
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                lineNumber: 132,
+                                lineNumber: 136,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                        lineNumber: 129,
+                        lineNumber: 131,
                         columnNumber: 11
                     }, this) : /* Grid of Doctor Calling Boards */ /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "grid gap-8 md:grid-cols-2 lg:grid-cols-3",
@@ -486,7 +487,7 @@ function QueueMonitor() {
                                                 children: docInfo.doctorName
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                lineNumber: 146,
+                                                lineNumber: 152,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -494,13 +495,13 @@ function QueueMonitor() {
                                                 children: docInfo.specialization
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                lineNumber: 147,
+                                                lineNumber: 155,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                        lineNumber: 145,
+                                        lineNumber: 151,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -514,7 +515,7 @@ function QueueMonitor() {
                                                         children: "Now Calling"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                        lineNumber: 156,
+                                                        lineNumber: 164,
                                                         columnNumber: 21
                                                     }, this),
                                                     docInfo.calling ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -524,7 +525,7 @@ function QueueMonitor() {
                                                                 className: "absolute inset-0 bg-radial-gradient(circle, rgba(20,184,166,0.1) 0%, transparent 80%) opacity-0 group-hover:opacity-100 transition-opacity"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                                lineNumber: 162,
+                                                                lineNumber: 170,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -535,7 +536,7 @@ function QueueMonitor() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                                lineNumber: 163,
+                                                                lineNumber: 171,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -546,13 +547,13 @@ function QueueMonitor() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                                lineNumber: 166,
+                                                                lineNumber: 174,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                        lineNumber: 160,
+                                                        lineNumber: 168,
                                                         columnNumber: 23
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800/80 p-6 rounded-2xl text-center shadow-inner",
@@ -562,7 +563,7 @@ function QueueMonitor() {
                                                                 children: "Idle"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                                lineNumber: 172,
+                                                                lineNumber: 180,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -570,19 +571,19 @@ function QueueMonitor() {
                                                                 children: "No active patients being called"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                                lineNumber: 175,
+                                                                lineNumber: 183,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                        lineNumber: 171,
+                                                        lineNumber: 179,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                lineNumber: 155,
+                                                lineNumber: 163,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -592,7 +593,7 @@ function QueueMonitor() {
                                                         children: "Queue List"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                        lineNumber: 184,
+                                                        lineNumber: 192,
                                                         columnNumber: 21
                                                     }, this),
                                                     docInfo.waiting.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -606,58 +607,58 @@ function QueueMonitor() {
                                                                 ]
                                                             }, token.id, true, {
                                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                                lineNumber: 190,
+                                                                lineNumber: 198,
                                                                 columnNumber: 27
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                        lineNumber: 188,
+                                                        lineNumber: 196,
                                                         columnNumber: 23
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Figital$2f$HAQMS$2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "text-xs text-slate-400 dark:text-slate-500 italic block",
                                                         children: "No upcoming patients in queue"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                        lineNumber: 200,
+                                                        lineNumber: 208,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                                lineNumber: 183,
+                                                lineNumber: 191,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                        lineNumber: 153,
+                                        lineNumber: 161,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, docId, true, {
                                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                                lineNumber: 140,
+                                lineNumber: 146,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                        lineNumber: 138,
+                        lineNumber: 144,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-                lineNumber: 81,
+                lineNumber: 80,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/Figital/HAQMS/frontend/src/app/queue/page.js",
-        lineNumber: 78,
+        lineNumber: 77,
         columnNumber: 5
     }, this);
 }
-_s(QueueMonitor, "IjNnFN85dkhjSkcWXDqhOK2vNeY=");
+_s(QueueMonitor, "DTsTvxgJn+P0OWJEp/Ja4C3rMyg=");
 _c = QueueMonitor;
 var _c;
 __turbopack_context__.k.register(_c, "QueueMonitor");
